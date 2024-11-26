@@ -27,7 +27,7 @@ vim.opt.relativenumber = false
 vim.opt.scrolloff = 8
 
 -- Colourscheme
-vim.cmd.colorscheme = "catppuccin"
+vim.cmd.colorscheme = "tokyonight"
 
 -- Use spaces instead of tabs
 vim.opt.expandtab = true
@@ -43,6 +43,7 @@ vim.opt.smartindent = true
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
 
 -- Setup lazy.nvim
 require("lazy").setup({

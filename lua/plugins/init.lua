@@ -1,23 +1,29 @@
-return {
+return { 
+
+  {
+    "williamboman/mason.nvim",
+    config = function ()
+      require("mason").setup()
+    end,
+  },
   {
     "nvim-treesitter/nvim-treesitter", 
     opts = {
       ensure_installed = { "javascript", "rust", "typescript", "css", "html", "json" },
     },
   },
-  "nvim-tree/nvim-web-devicons",
   { 
     "nvim-tree/nvim-tree.lua",
     opts = { view = { width = 30 } },
     keys = {
       { "<leader>bb", "<cmd>NvimTreeToggle<cr>", desc = "Toggle nvim tree" },
+      { "<leader>bf", "<cmd>NvimTreeFocus<cr>", desc = "Focus nvim tree" },
     },
   },
   "nvim-lua/plenary.nvim",
   "folke/neodev.nvim",
   "folke/which-key.nvim",
-  { "folke/neoconf.nvim", cmd = "Neoconf", config = true, dependencies = { "neovim/nvim-lspconfig" } },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = { flavour = "frappe" } },  
+  { "folke/neoconf.nvim", cmd = "Neoconf", config = true, dependencies = { "neovim/nvim-lspconfig" } }, 
   {
     "junegunn/fzf",
     build = function()
