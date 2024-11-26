@@ -1,4 +1,10 @@
 return {
+  {
+    "nvim-treesitter/nvim-treesitter", 
+    opts = {
+      ensure_installed = { "javascript", "rust", "typescript", "css", "html", "json" },
+    },
+  },
   "nvim-tree/nvim-web-devicons",
   { 
     "nvim-tree/nvim-tree.lua",
