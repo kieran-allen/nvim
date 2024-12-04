@@ -27,7 +27,7 @@ vim.opt.relativenumber = false
 vim.opt.scrolloff = 8
 
 -- Colourscheme
-vim.cmd.colorscheme = "tokyonight"
+vim.cmd.colorscheme = "catppuccin"
 
 -- Use spaces instead of tabs
 vim.opt.expandtab = true

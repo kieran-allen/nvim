@@ -1,29 +1,14 @@
 return { 
-
-  {
-    "williamboman/mason.nvim",
-    config = function ()
-      require("mason").setup()
-    end,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter", 
-    opts = {
-      ensure_installed = { "javascript", "rust", "typescript", "css", "html", "json" },
-    },
-  },
   { 
     "nvim-tree/nvim-tree.lua",
     opts = { view = { width = 30 } },
     keys = {
-      { "<leader>bb", "<cmd>NvimTreeToggle<cr>", desc = "Toggle nvim tree" },
-      { "<leader>bf", "<cmd>NvimTreeFocus<cr>", desc = "Focus nvim tree" },
+      { "<leader>bb", "<cmd>NvimTreeToggle<cr>", desc = "NvimTreeToggle" },
+      { "<leader>bf", "<cmd>NvimTreeFocus<cr>", desc = "NvimTreeFocus" },
+      { "<leader>bz", "<cmd>NvimTreeFindFile<cr>", desc = "NvimTreeFindFile" },
     },
   },
-  "nvim-lua/plenary.nvim",
-  "folke/neodev.nvim",
   "folke/which-key.nvim",
-  { "folke/neoconf.nvim", cmd = "Neoconf", config = true, dependencies = { "neovim/nvim-lspconfig" } }, 
   {
     "junegunn/fzf",
     build = function()
@@ -34,11 +19,17 @@ return {
     "linrongbin16/fzfx.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons", 'junegunn/fzf' },
     keys = {
-        { "<leader>ff", "<cmd>FzfxFiles<cr>", desc = "Fuzzy search files" }
+        { "<leader>fa", "<cmd>FzfxFiles<cr>", desc = "Fuzzy search files" },
+        { "<leader>ff", "<cmd>FzfxGFiles<cr>", desc = "FzfxGFiles" },
     },
     config = function()
       require("fzfx").setup()
     end,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    requires = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
   },
 }
 
