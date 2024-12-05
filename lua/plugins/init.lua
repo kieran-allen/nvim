@@ -1,5 +1,5 @@
-return { 
-  { 
+return {
+  {
     "nvim-tree/nvim-tree.lua",
     opts = { view = { width = 30 } },
     keys = {
