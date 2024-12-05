@@ -21,6 +21,7 @@ return {
     keys = {
         { "<leader>fa", "<cmd>FzfxFiles<cr>", desc = "Fuzzy search files" },
         { "<leader>ff", "<cmd>FzfxGFiles<cr>", desc = "FzfxGFiles" },
+        { "<leader>fg", "<cmd>FzfxGLiveGrep<cr>", desc = "FzfxGLiveGrep" },
     },
     config = function()
       require("fzfx").setup()
