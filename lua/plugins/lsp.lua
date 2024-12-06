@@ -1,3 +1,4 @@
+
 return {
   {
     "williamboman/mason.nvim",
@@ -12,6 +13,7 @@ return {
           "lua_ls",
           "rust_analyzer",
           "ts_ls",
+          "html",
         },
       }
     end,
@@ -21,15 +23,25 @@ return {
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
       "williamboman/mason.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
-      require("lspconfig").lua_ls.setup {}
+      local capabilities = require("cmp_nvim_lsp")
+      require("lspconfig").lua_ls.setup {
+        capabilities = capabilities,
+      }
+      require("lspconfig").html.setup {
+        capabilities = capabilities,
+      }
       require("lspconfig").rust_analyzer.setup {
+        capabilities = capabilities,
         settings = {
           ["rust-analyzer"] = {}
         },
       }
-      require("lspconfig").ts_ls.setup {}
+      require("lspconfig").ts_ls.setup {
+        capabilities = capabilities,
+      }
     end,
   },
 }
