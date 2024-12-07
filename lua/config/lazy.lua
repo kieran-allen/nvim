@@ -41,6 +41,10 @@ vim.opt.smartindent = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Vim spell checking.
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
