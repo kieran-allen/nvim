@@ -13,6 +13,8 @@ return {
         { "<leader>ff", "<cmd>FzfxGFiles<cr>", desc = "FzfxGFiles" },
         { "<leader>fg", "<cmd>FzfxGLiveGrep<cr>", desc = "FzfxGLiveGrep" },
         { "<leader>fb", "<cmd>FzfxBufLiveGrep<cr>", desc = "FzfxBufLiveGrep" },
+        { "<leader>FG", "<cmd>FzfxLiveGrep<cr>", desc = "FzfxLiveGrep" },
+        { "<leader>FB", "<cmd>FzfxGBranches<cr>", desc = "Find git branches" },
     },
     config = function()
       require("fzfx").setup()
