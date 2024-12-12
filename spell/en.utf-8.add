@@ -25,3 +25,12 @@ maplocalleader
 nvim
 plugins
 plugin
+cardano
+paymentKey
+stakeKey
+param
+TyphonTypes
+eslint
+BipPath
+bipPath
+bipPathString
